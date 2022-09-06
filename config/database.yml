@@ -7,19 +7,26 @@ default: &default
 development:
   <<: *default
   adapter: postgresql
+  database: blog_development
   username: harshit111 
   password: harshit123
   host: localhost
-  database: blog_development
 
 
 test:
   <<: *default
+  adapter: postgresql
   database: blog_test
+  username: harshit111 
+  password: harshit123
+  host: localhost
+
 
 
 production:
   <<: *default
+  adapter: postgresql
   database: blog_production
   username: harshit111 
   password: harshit123
+  host: localhost
